@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web 安全演示</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <%- include('header'); -%>
+    <main>
+      <% if (name) { %>
+      <h1><%= name %> ,您的余额为 <%= balance %></h1>
+      <form>
+        <label>用户</label>
+        <input id="username" name="username" />
+        <span>金额</span>
+        <input id="amount" name="amount" />
+        <button type="button" id="button">转账</button>
+      </form>
+      <% } else { %>
+      <h1>请登录</h1>
+      <% } %>
+    </main>
+  </body>
+  <script src="/js/index.js"></script>
+</html>
